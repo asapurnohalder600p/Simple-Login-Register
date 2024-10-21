@@ -2,6 +2,8 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate,login,logout
 from MyApp.models import *
+
+
 #loginPage 
 def loginPage(req):
     if req.method=="POST":
@@ -35,9 +37,24 @@ def registerPage(req):
     return render(req,'registerPage.html')
 
 
+def logoutPage(req):
+    logout(req)
+    return redirect('loginPage')
+
 #homePage
 def homePage(req):
 
 
     
-    return render(req,'home.html')
+    return render(req,'homePage.html')
+
+
+#profilePage
+def profilePage(req):
+
+    return render(req,'profilePage.html')
+
+
+#Add form
+def addjob(req):
+    return render(req,'addjob.html')
