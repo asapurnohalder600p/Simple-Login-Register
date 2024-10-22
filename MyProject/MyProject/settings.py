@@ -114,8 +114,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL='MyApp.Custom_User_Model'
 
+LOGIN_URL="loginPage"
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    
 ]

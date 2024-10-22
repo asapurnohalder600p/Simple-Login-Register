@@ -1,30 +1,20 @@
 {% extends "base.html" %}
 {% block body %}
 
-
-
-<header>
-    <h3>Username :</h3>
-    <img src="[Your Profile Picture URL]" alt="Profile Picture" class="profile-pic">
-    <h2>First Name  Last Name</h2>
-</header>
-
-<section class="about">
-    <h3>About Me</h3>
-    <p>Hi! I’m {{request.user.first_name}}, a passionate stylist with over [X years] of experience in [specific area]. I believe that style is a personal expression, and I love helping clients discover their unique look.</p>
-</section>
-
-<section class="contact">
-    <h3>Contact Information</h3>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>Phone: [Your Phone Number]</p>
-    <p>Follow me: <a href="[Your Instagram Link]">Instagram</a>, <a href="[Your Facebook Link]">Facebook</a></p>
-</section>
-
-<section class="booking">
-    <h3>Booking Information</h3>
-    <p>Ready to elevate your style? <a href="[Insert Booking Link]">Book a consultation today!</a></p>
-</section>
+<div class='bodyq'>
+    <header>
+        <h1>Profile Page</h1>
+        <img src="/{{request.user.Profile_Pic}}" alt="Profile Picture" class="profile-pic">
+        <h3>Username: {{request.user.username}}</h3>
+        <h2>{{request.user.first_name}} {{request.user.last_name}}</h2>
+    </header>
+    <section class="contact">
+        <h3>Contact Information</h3>
+        <p>Email: <a href="mailto:{{request.user.email}}">{{request.user.email}}</a></p>
+        <p>Phone: [Your Phone Number]</p>
+        <p>Follow me: <a href="[Your Instagram Link]">Instagram</a>, <a href="[Your Facebook Link]">Facebook</a></p>
+    </section>
+</div>
 
 
 
